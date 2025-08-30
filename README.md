@@ -1,62 +1,49 @@
+# 📚 StudyMate Mini (Prompt Engineering Demo)
 
-# 📚🤖 Study Mate
+StudyMate Mini is a Streamlit-based web app that uses OpenAI GPT-3.5 to analyze study content or documents. It generates a concise summary and a short Q&A section to help users understand the material better.
 
-Study Mate is a web app that simplifies learning by allowing students to query PDF content and generates personalized multiple-choice questions, enhancing study efficiency.
+## 🔧 Features
+- Upload and analyze TXT, PDF, or DOCX files
+- Paste custom study content directly
+- GPT-3.5 powered summaries and Q&A generation
+- Session logging with summaries and questions
+- Word limit enforcement for GPT-3.5 context safety
 
-Try out now! - [Study Mate](https://study-mate-9eo6.onrender.com)
+## 🚀 Getting Started
 
-## 🎥 Video Tutorial
-
-The video below demonstrates the application's usage.
-
-[![youtube](https://img.youtube.com/vi/8BExf2rU5Dg/0.jpg)](https://youtu.be/8BExf2rU5Dg)
-
-
-## Prerequisites
-
-This app requires a **Google API key** for it to work.
-
-You can obtain the API key for **free** from the following link: 
-
-[Google AI studio](https://makersuite.google.com/app/apikey) 
-
-Simply log in with your Google account, navigate to "Get API key," proceed to "Create API key in new project," and then copy the generated API key.
-
-
-
-
-
-## Run Locally
-
-Clone the project
-
+### 1. Install Dependencies
 ```bash
-  git clone https://github.com/jishnu7777/Study-Mate.git
+pip install -r requirements.txt
 ```
 
-Go to the project directory
-
+### 2. Set OpenAI API Key
+In your environment variables or in `.env`:
 ```bash
-  cd Study-Mate
+export OPENAI_API_KEY=sk-your-api-key
 ```
 
-Install the required dependencies
-
+### 3. Run the App
 ```bash
-  pip install -r requirements.txt
+streamlit run app.py
 ```
 
-Start the server
+## 📂 File Structure
+- `app.py`: Main Streamlit application
+- `prompts/`: Prompt templates
+- `logs/`: JSON file logging all session data
+- `requirements.txt`: Dependency list
+- `.gitignore`: Files/folders to exclude from Git
 
-```bash
-  python main.py
-```
+## 🧠 Prompt Engineering
+Two custom templates are used:
+- Summary
+- Question & Answer
 
+These are injected dynamically with your input.
 
-## 🔗 Links
+- ✅ **Mini Demo (prompt-based)**  
+- 🚀 **Full Flagship (multi-component StudyMate GPT)**
 
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jishnu-saha7777/)
-[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/jishnu_2069/)
-[![youtube](https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/c/Jishnu69)
+---
 
-
+Built with 💡 by Rehan Shafi.
